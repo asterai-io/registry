@@ -279,7 +279,7 @@ impl Client {
         into_result::<_, FetchError>(
             self.client
                 .get(url)
-                .warg_header(registry_domain)?
+                //.warg_header(registry_domain)?
                 .auth(self.auth_token())
                 .send()
                 .await?,
@@ -304,7 +304,7 @@ impl Client {
             .client
             .post(url)
             .json(&request)
-            .warg_header(registry_domain)?
+            //.warg_header(registry_domain)?
             .auth(self.auth_token())
             .send()
             .await?;
@@ -327,7 +327,7 @@ impl Client {
             .client
             .post(&url)
             .json(&request)
-            .warg_header(registry_domain)?
+            //.warg_header(registry_domain)?
             .auth(self.auth_token())
             .send()
             .await?;
@@ -358,7 +358,7 @@ impl Client {
         let response = self
             .client
             .post(url)
-            .warg_header(registry_domain)?
+            //.warg_header(registry_domain)?
             .auth(self.auth_token())
             .json(&request)
             .send()
@@ -380,7 +380,7 @@ impl Client {
         into_result::<_, LedgerError>(
             self.client
                 .get(url)
-                .warg_header(registry_domain)?
+                //.warg_header(registry_domain)?
                 .auth(self.auth_token())
                 .send()
                 .await?,
@@ -406,7 +406,7 @@ impl Client {
             .client
             .post(url)
             .json(&request)
-            .warg_header(registry_domain)?
+            //.warg_header(registry_domain)?
             .auth(self.auth_token())
             .send()
             .await?;
@@ -431,7 +431,7 @@ impl Client {
         into_result::<_, PackageError>(
             self.client
                 .get(url)
-                .warg_header(registry_domain)?
+                //.warg_header(registry_domain)?
                 .auth(self.auth_token())
                 .send()
                 .await?,
@@ -455,7 +455,7 @@ impl Client {
         into_result::<_, ContentError>(
             self.client
                 .get(url)
-                .warg_header(registry_domain)?
+                //.warg_header(registry_domain)?
                 .auth(self.auth_token())
                 .send()
                 .await?,
@@ -522,7 +522,7 @@ impl Client {
             self.client
                 .post(url)
                 .json(&request)
-                .warg_header(registry_domain)?
+                //.warg_header(registry_domain)?
                 .auth(self.auth_token())
                 .send()
                 .await?,
@@ -545,7 +545,7 @@ impl Client {
             self.client
                 .post(url)
                 .json(&request)
-                .warg_header(registry_domain)?
+                //.warg_header(registry_domain)?
                 .auth(self.auth_token())
                 .send()
                 .await?,
