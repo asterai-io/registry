@@ -985,9 +985,13 @@ impl DataStore for PostgresDataStore {
                 }
             },
             None => {
-                return Err(DataStoreError::PackageNamespaceNotDefined(
-                    package_name.namespace().to_string(),
-                ))
+                // TODO: this is commented out so that packages can be published
+                // on any namespace.
+                // How to systematically define a namespace?
+                //
+                // return Err(DataStoreError::PackageNamespaceNotDefined(
+                //     package_name.namespace().to_string(),
+                // ))
             }
         }
 
